@@ -23,4 +23,5 @@ $wsh = New-Object -ComObject WScript.Shell
 $shortcut = $wsh.CreateShortcut($shortcutPath)
 $shortcut.TargetPath = $alacritty
 $shortcut.Description = 'Alacritty with Git Bash'
+$shortcut.WorkingDirectory = $env:USERPROFILE
 $shortcut.Save()
